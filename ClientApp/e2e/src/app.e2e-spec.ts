@@ -34,13 +34,15 @@ describe('App', () => {
     element.all(by.tagName('body')).getText().then((text) => {
       expect(text[0]).toContain('Rodney Mullen');
       expect(text[0]).toContain('Tony Hawk');
+      expect(text[0]).toContain('Bam Margara');
+      //expect(text[0]).toContain('Bob Burnquist');
     });
   });
 
-  xit('check if all actresses are present', () => {
+  it('check if all actresses are present', () => {
     element.all(by.tagName('body')).getText().then((text) => {
       expect(text[0]).toContain('Sarah Michelle Gellar');
-      expect(text[0]).toContain('Brie Larsson');
+      //expect(text[0]).toContain('Brie Larsson');
     });
   });
 });
