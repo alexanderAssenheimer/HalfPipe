@@ -42,7 +42,8 @@ describe('App', () => {
   it('check if all actresses are present', () => {
     element.all(by.tagName('body')).getText().then((text) => {
       expect(text[0]).toContain('Sarah Michelle Gellar');
-      //expect(text[0]).toContain('Brie Larsson');
+      expect(text[0]).toContain('Liv Tyler');
+      expect(text[0]).toContain('Brie Larsson');
     });
   });
 });
