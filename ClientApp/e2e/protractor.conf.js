@@ -32,6 +32,7 @@ exports.config = {
     }
   ],
   directConnect: true,
+  chromeDriver: '../e2e/chrome/chromedriver_83.0.4103.39.exe',
   //baseUrl: 'http://localhost:4200/',
   //baseUrl: 'http://localhost:1103/',
   baseUrl: 'https://halfpipe.azurewebsites.net',
