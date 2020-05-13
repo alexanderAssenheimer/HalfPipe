@@ -25,6 +25,34 @@ describe('App', () => {
     browser.waitForAngularEnabled(false);
   });
 
+  it('getting resolution of current envireonment', () => {
+    /*
+    browser.getScreenOrientation().then((orientation) => {
+      console.log("orientation = " + orientation);
+    });
+    */
+
+    browser.manage().window().getSize().then((size) => {
+      console.log("size.width = " + size.width);
+      console.log("size.height = " + size.height);
+      // JSON.stringify(size)
+    });
+
+    console.log('Resizing...');
+    /*
+    browser.manage().window().maximize().then(() => {
+      console.log('Browser should be maximized.');
+    });
+    */
+    browser.manage().window().setSize(640, 480);
+
+    browser.manage().window().getSize().then((size) => {
+      console.log("size.width = " + size.width);
+      console.log("size.height = " + size.height);
+      // JSON.stringify(size)
+    });
+  });
+
   it('should display welcome message', () => {
     page.navigateTo();
     expect(page.getMainHeading()).toEqual('HalfPipe U');
