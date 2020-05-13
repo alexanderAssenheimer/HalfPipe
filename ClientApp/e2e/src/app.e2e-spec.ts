@@ -35,7 +35,7 @@ describe('App', () => {
       expect(text[0]).toContain('Rodney Mullen');
       expect(text[0]).toContain('Tony Hawk');
       expect(text[0]).toContain('Bam Margara');
-      //expect(text[0]).toContain('Bob Burnquist');
+      expect(text[0]).toContain('Bob Burnquist');
     });
   });
 
@@ -45,5 +45,9 @@ describe('App', () => {
       expect(text[0]).toContain('Liv Tyler');
       expect(text[0]).toContain('Brie Larsson');
     });
+  });
+
+  it('check if button is clickable', () => {
+    element(by.buttonText('Invite')).click();
   });
 });
