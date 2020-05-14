@@ -44,7 +44,7 @@ describe('App', () => {
       console.log('Browser should be maximized.');
     });
     */
-    browser.manage().window().setSize(640, 480);
+    browser.manage().window().setSize(1920, 1080);
 
     browser.manage().window().getSize().then((size) => {
       console.log("size.width = " + size.width);
