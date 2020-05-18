@@ -2,7 +2,7 @@ import { AppPage } from './app.po';
 import { element } from 'protractor';
 import { browser, by } from 'protractor';
 
-describe('App', () => {
+describe('HalfPipe - Common E2E', () => {
   let page: AppPage;
 
   //---------------------------------------------------------------------------
