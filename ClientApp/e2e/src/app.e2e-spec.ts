@@ -78,4 +78,8 @@ describe('HalfPipe - Common E2E', () => {
   it('check if button is clickable', () => {
     element(by.buttonText('Invite')).click();
   });
+
+  it('should fail', () => {
+    expect(true).toBeFalsy();
+  });
 });
