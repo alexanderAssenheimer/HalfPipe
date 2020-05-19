@@ -79,7 +79,7 @@ describe('HalfPipe - Common E2E', () => {
     element(by.buttonText('Invite')).click();
   });
 
-  xit('should fail', () => {
+  it('should fail', () => {
     expect(true).toBeFalsy();
   });
 });
