@@ -9,6 +9,14 @@ describe('HalfPipe - Common E2E', () => {
 
   beforeAll(() => {
     page = new AppPage();
+
+    /// Really important stuff! 
+    var env = jasmine.getEnv();
+    env.clearReporters();
+    var SpecReporter = require('jasmine-spec-reporter');
+    env.addReporter(new SpecReporter({
+      displayStacktrace: true
+    }));
   });
 
   beforeEach(() => {
