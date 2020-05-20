@@ -4,7 +4,13 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 const { JUnitXmlReporter } = require('jasmine-reporters');
 
+// New and important!
+/*
+var env = jasmine.getEnv();
+env.clearReporters();
+*/
 process.env.CHROME_BIN = process.env.CHROME_BIN || require("puppeteer").executablePath();
+
 
 exports.config = {
   allScriptsTimeout: 11000,
@@ -54,7 +60,7 @@ exports.config = {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: 'pretty' } }));
     var junitReporter = new JUnitXmlReporter({
       savePath: require('path').join(__dirname, './junit'),
       consolidateAll: true
