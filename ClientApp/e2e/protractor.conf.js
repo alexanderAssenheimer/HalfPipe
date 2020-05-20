@@ -4,11 +4,6 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 const { JUnitXmlReporter } = require('jasmine-reporters');
 
-// New and important!
-/*
-var env = jasmine.getEnv();
-env.clearReporters();
-*/
 process.env.CHROME_BIN = process.env.CHROME_BIN || require("puppeteer").executablePath();
 
 
