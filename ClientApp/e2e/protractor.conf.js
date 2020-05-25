@@ -43,8 +43,8 @@ exports.config = {
   //chromeDriver: '../e2e/chrome/chromedriver_77.0.3865.10.exe',
   //chromeDriver: '../e2e/chrome/chromedriver_76.0.3809.126.exe',
   //baseUrl: 'http://localhost:4200/',
-  baseUrl: 'https://halfpipe.azurewebsites.net',
-  //baseUrl: 'https://halfpipe-staging.azurewebsites.net',
+  //baseUrl: 'https://halfpipe.azurewebsites.net',
+  baseUrl: 'https://halfpipe-staging.azurewebsites.net',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
