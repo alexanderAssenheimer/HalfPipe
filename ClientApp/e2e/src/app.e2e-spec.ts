@@ -80,9 +80,9 @@ describe('HalfPipe - Common E2E', () => {
     element(by.buttonText('Invite')).click();
   });
 
-  xit('check version (should be the newest)', () => {
+  it('check version (should be the newest)', () => {
     element.all(by.tagName('body')).getText().then((text) => {
-      expect(text[0]).toContain('34 should succeed');
+      expect(text[0]).toContain('36 should succeed');
       //expect(text[0]).toContain('23 + 1');
     });
   });
