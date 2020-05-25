@@ -87,7 +87,7 @@ describe('HalfPipe - Common E2E', () => {
     });
   });
 
-  xit('should fail', () => {
+  it('should fail', () => {
     expect(true).toBeFalsy();
   });
 
