@@ -82,12 +82,12 @@ describe('HalfPipe - Common E2E', () => {
 
   it('check version (should be the newest)', () => {
     element.all(by.tagName('body')).getText().then((text) => {
-      expect(text[0]).toContain('43 should succeed');
+      expect(text[0]).toContain('44 should succeed');
       //expect(text[0]).toContain('23 + 1');
     });
   });
 
-  xit('should fail', () => {
+  it('should fail', () => {
     expect(true).toBeFalsy();
   });
 
