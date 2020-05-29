@@ -6,7 +6,6 @@ const { JUnitXmlReporter } = require('jasmine-reporters');
 
 process.env.CHROME_BIN = process.env.CHROME_BIN || require("puppeteer").executablePath();
 
-
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
@@ -17,8 +16,8 @@ exports.config = {
     {
       'browserName': 'chrome',
       chromeOptions: {
-        args: ["disable-gpu", "--lang=de-DE", "--enable-browser-side-navigation"],
         //args: ["--headless", "disable-gpu", "--lang=de-DE", "--enable-browser-side-navigation"],
+        args: ["disable-gpu", "--lang=de-DE"],
         binary: process.env.CHROME_BIN
       }
     },
@@ -33,17 +32,7 @@ exports.config = {
     }
   ],
   directConnect: true,
-  //chromeDriver: '../e2e/chrome/chromedriver_83.0.4103.39.exe',
-  //chromeDriver: '../e2e/chrome/chromedriver_83.0.4103.14.exe',
   chromeDriver: '../e2e/chrome/chromedriver_81.0.4044.138.exe',
-  //chromeDriver: '../e2e/chrome/chromedriver_81.0.4044.69.exe',
-  //chromeDriver: '../e2e/chrome/chromedriver_80.0.3987.106.exe',
-  //chromeDriver: '../e2e/chrome/chromedriver_78.0.3904.11.exe',
-  //chromeDriver: '../e2e/chrome/chromedriver_77.0.3865.40.exe',
-  //chromeDriver: '../e2e/chrome/chromedriver_77.0.3865.10.exe',
-  //chromeDriver: '../e2e/chrome/chromedriver_76.0.3809.126.exe',
-  //baseUrl: 'http://localhost:4200/',
-  //baseUrl: 'https://halfpipe.azurewebsites.net',
   baseUrl: 'https://halfpipe-staging.azurewebsites.net',
   framework: 'jasmine',
   jasmineNodeOpts: {
